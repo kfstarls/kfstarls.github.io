@@ -52,7 +52,7 @@ main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) but
     translate: 0 4px;
   }
 
-  main.os-study .os-next:hover {
+  main.os-study a.os-next[href]:hover {
     text-decoration: none;
     translate: 0 -4px;
     box-shadow: 0 12px 28px #20335318;
@@ -67,6 +67,10 @@ main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) but
 main.sca-study .sca-cta > span {
   display: inline-block;
   transition: translate 180ms ease;
+}
+
+main.os-study a.os-next[href]:focus-visible {
+  text-decoration: none;
 }
 
 main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page)

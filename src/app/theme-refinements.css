@@ -1,3 +1,8 @@
+.page-shell .contact-heading .email-link,
+.page-shell .contact-heading .email-link:hover {
+  border-bottom: 0;
+  text-decoration: none;
+}
 .page-shell .fk-hero .primary-button:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
 html[data-theme="dark"] .page-shell .fk-hero .primary-button { background:#eef0f4; color:#292b31; }
 html[data-theme="dark"] .page-shell .fk-hero .primary-button:hover { background:#dce1e9; color:#292b31; }
