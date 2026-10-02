@@ -1,0 +1,62 @@
+/* Animate decorative artwork only. Individual transforms preserve existing 3D poses and hover effects. */
+@keyframes portfolio-float { 0%,100% { translate:0 0; } 50% { translate:0 -10px; } }
+@keyframes portfolio-float-soft { 0%,100% { translate:0 0; } 50% { translate:0 -5px; } }
+@keyframes portfolio-orbit { 0%,100% { rotate:0deg; } 50% { rotate:5deg; } }
+@keyframes portfolio-route { to { stroke-dashoffset:-48; } }
+@keyframes portfolio-spark { 0%,100% { scale:1; opacity:.75; } 50% { scale:1.12; opacity:1; } }
+@keyframes portfolio-breathe { 0%,100% { opacity:.6; } 50% { opacity:1; } }
+@keyframes portfolio-vehicle { 0%,100% { translate:0 0; } 50% { translate:7px -3px; } }
+
+/* Automotive: drifting parcels and connected supply routes. */
+.os-hero-network > g[transform] { animation:portfolio-float 7s ease-in-out infinite; }
+.os-hero-network > g[transform]:nth-of-type(even) { animation-delay:-3.5s; animation-duration:8s; }
+.os-hero-network > g[stroke-dasharray] { animation:portfolio-route 10s linear infinite; }
+.os-hero-network > g[fill] { animation:portfolio-breathe 5s ease-in-out infinite; }
+.projects-grid .automotive-cover-image { animation:portfolio-float-soft 7s ease-in-out infinite; }
+
+/* IT hardware: a floating device, with restrained orbital movement. */
+.it-laptop-scene .it-laptop { animation:portfolio-float 8s ease-in-out infinite; }
+.it-laptop-scene .it-orbit { animation:portfolio-orbit 12s ease-in-out infinite; }
+.it-laptop-scene .it-orbit-two { animation-delay:-6s; }
+.it-laptop-scene .it-screen-lines i { animation:portfolio-breathe 5s ease-in-out infinite; }
+.it-laptop-scene .it-screen-lines i:nth-child(2) { animation-delay:-1.5s; }
+.it-laptop-scene .it-screen-lines i:nth-child(3) { animation-delay:-3s; }
+
+/* Gateway: animate the existing SVG groups without replacing their positioned transforms. */
+.sg-network-art > g[stroke-dasharray] { animation:portfolio-route 9s linear infinite; }
+.sg-network-art > g[transform] { animation:portfolio-float-soft 7s ease-in-out infinite; }
+.sg-network-art > g[transform]:nth-of-type(odd) { animation-delay:-3s; }
+.sg-network-art > g[transform]:last-of-type { animation:portfolio-vehicle 8s ease-in-out infinite; }
+.sg-preview .sg-orbit-tag { animation:portfolio-float-soft 8s ease-in-out infinite; }
+.sg-preview .sg-orbit-tag:nth-of-type(2) { animation-delay:-2s; }
+.sg-preview .sg-orbit-tag:nth-of-type(3) { animation-delay:-4s; }
+
+/* Sustainability: sway the whole plant so its veins and stem remain aligned. */
+.esg-art { animation:portfolio-float-soft 8s ease-in-out infinite; }
+.esg-art > g[transform] { animation:portfolio-float-soft 6s ease-in-out infinite; }
+.esg-art > g[transform]:nth-of-type(even) { animation-delay:-3s; }
+.esg-art > ellipse[stroke-dasharray] { animation:portfolio-route 18s linear infinite; }
+.esg-art > circle { animation:portfolio-breathe 6s ease-in-out infinite; }
+
+/* Assistant: independent floating layers in both the cover and case-study sculpture. */
+.assistant-cover-head,.sca-sculpture .sca-bot { animation:portfolio-float 7s ease-in-out infinite; }
+.assistant-cover-message,.sca-sculpture .sca-float { animation:portfolio-float-soft 8s ease-in-out infinite; }
+.assistant-cover-answer,.sca-sculpture .sca-float-b { animation-delay:-4s; }
+.assistant-cover-orbit,.sca-sculpture .sca-orbit { animation:portfolio-orbit 14s ease-in-out infinite; }
+.assistant-cover-spark,.sca-sculpture .sca-spark { animation:portfolio-spark 6s ease-in-out infinite; }
+
+.graphic-motion-control { position:fixed;right:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:7px;min-height:36px;padding:8px 12px;border:1px solid #94a3b866;border-radius:24px;background:#ffffffed;color:#344155;box-shadow:0 3px 12px #0f172a10;font:11px/1.3 Arial,Helvetica,sans-serif;cursor:pointer; }
+.graphic-motion-control span { font-size:14px; }
+.graphic-motion-control:hover { background:#edf3fa; }
+.graphic-motion-control:focus-visible { outline:2px solid #2563eb;outline-offset:4px; }
+/* This switch also pauses the existing Animus animation. */
+html[data-graphic-motion="paused"] :is(.os-hero-network,.it-laptop-scene,.sg-network-art,.sg-preview,.esg-art,.assistant-cover-scene,.sca-sculpture,.an-art),
+html[data-graphic-motion="paused"] :is(.os-hero-network,.it-laptop-scene,.sg-network-art,.sg-preview,.esg-art,.assistant-cover-scene,.sca-sculpture,.an-art) *,
+html[data-graphic-motion="paused"] .automotive-cover-image { animation-play-state:paused!important; }
+@media(prefers-reduced-motion:reduce) {
+  :is(.os-hero-network,.it-laptop-scene,.sg-network-art,.sg-preview,.esg-art,.assistant-cover-scene,.sca-sculpture,.an-art),
+  :is(.os-hero-network,.it-laptop-scene,.sg-network-art,.sg-preview,.esg-art,.assistant-cover-scene,.sca-sculpture,.an-art) *,
+  .projects-grid .automotive-cover-image { animation:none!important; }
+  .graphic-motion-control { display:none; }
+}
+@media(max-width:600px) { .graphic-motion-control { right:12px;bottom:12px;font-size:10px; } }

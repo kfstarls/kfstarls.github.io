@@ -1,0 +1,94 @@
+/* Shared interaction feedback, scoped to case studies only. */
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) a[href],
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) button:not(:disabled) {
+  cursor: pointer;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  transition: color 180ms ease, background-color 180ms ease,
+    box-shadow 180ms ease, translate 180ms ease, opacity 180ms ease,
+    border-color 180ms ease, text-decoration-color 180ms ease;
+}
+
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) a[href]:focus-visible,
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) button:not(:disabled):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+  text-decoration: underline;
+}
+
+@media (hover: hover) {
+  main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) a[href]:hover {
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+    translate: 0 -2px;
+  }
+
+  main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) button:not(:disabled):hover {
+    translate: 0 -2px;
+    box-shadow: 0 4px 12px #19284320;
+    background-color: color-mix(in srgb, currentColor 8%, transparent);
+  }
+
+  main.esg-study .esg-start:hover {
+    background-color: #d4efb4;
+    box-shadow: 0 7px 18px #061e3328;
+  }
+
+  main.sca-study .sca-cta:hover {
+    color: #4656a0;
+  }
+
+  /* These links already have a baseline: keep a single line, without a block shadow. */
+  main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page)
+    a:is(.sca-cta, .sca-link, .sg-text-link, .it-text-link, .text-link):hover {
+    text-decoration: none;
+    box-shadow: none;
+    translate: none;
+    border-color: currentColor;
+    opacity: .8;
+  }
+
+  main.sca-study .sca-cta:hover > span {
+    translate: 0 4px;
+  }
+
+  main.os-study .os-next:hover {
+    text-decoration: none;
+    translate: 0 -4px;
+    box-shadow: 0 12px 28px #20335318;
+  }
+
+  main.os-study .os-next:hover h2,
+  main.os-study .os-next:hover h3 {
+    text-decoration: none;
+  }
+}
+
+main.sca-study .sca-cta > span {
+  display: inline-block;
+  transition: translate 180ms ease;
+}
+
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page)
+  a:is(.sca-cta, .sca-link, .sg-text-link, .it-text-link, .text-link):focus-visible {
+  text-decoration: none;
+}
+
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) a[href]:active,
+main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) button:not(:disabled):active {
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main.sca-study .sca-cta > span,
+  main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) a[href],
+  main:is(.os-study, .it-study, .sg-study, .esg-study, .sca-study, .case-page) button:not(:disabled) {
+    transition: none !important;
+    translate: none !important;
+  }
+}
+/* Saturated heading accents replace muted body-text colours. */
+.it-study .it-shift h2 span,.it-study .it-question h2 span{color:#215b98}
+.sg-study .sg-section h2 span{color:#a50b35}
+html[data-theme="dark"] .it-study .it-shift h2 span,html[data-theme="dark"] .it-study .it-question h2 span{color:#a9cefa}
+html[data-theme="dark"] .sg-study .sg-section h2 span{color:#f8a8be}

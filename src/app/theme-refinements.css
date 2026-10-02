@@ -1,0 +1,31 @@
+.page-shell .fk-hero .primary-button:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+html[data-theme="dark"] .page-shell .fk-hero .primary-button { background:#eef0f4; color:#292b31; }
+html[data-theme="dark"] .page-shell .fk-hero .primary-button:hover { background:#dce1e9; color:#292b31; }
+.page-shell .theme-toggle { color:var(--ink); cursor:pointer; transition:background-color .18s,color .18s,border-color .18s; }
+.page-shell .theme-toggle:hover { background:#e5edf8; color:#43648d; border-color:#b9cce5; }
+.page-shell .theme-toggle:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+html[data-theme="dark"] .page-shell .theme-toggle:hover { background:#b5cbe6; color:#203a5a; border-color:#b5cbe6; }
+main .project-confidentiality a { padding-bottom:4px; border-bottom:1px solid transparent; }
+main .project-confidentiality a[href]:hover,main .project-confidentiality a[href]:focus-visible { text-decoration:none; border-bottom-color:currentColor; }
+html[data-theme="dark"] .os-study .os-hifi-gallery .os-process-image { border:0; background:transparent; }
+html[data-theme="dark"] .os-study .os-hifi-gallery .os-process-image img { clip-path:inset(2px round 16px); }
+html[data-theme="dark"] main .esg-nav-shell,
+html[data-theme="dark"] main .an-nav,
+html[data-theme="dark"] main .sca-nav-wrap { background:var(--paper); color:var(--ink); border-color:var(--line); }
+html[data-theme="dark"] main :is(.esg-nav,.an-nav,.sca-nav) :is(span,a:last-child) { color:var(--muted); }
+html[data-theme="dark"] main.an-study .an-nav a:hover { color:#b5f1d3; }
+
+/* The assistant keeps its blue/lilac identity with dark reading surfaces. */
+html[data-theme="dark"] main.sca-study { background:#0c1017; color:#edf1fb; --sca-muted:#b2bdd2; --sca-blue:#a9baff; }
+html[data-theme="dark"] .sca-study .sca-hero { background:radial-gradient(ellipse at 77% 43%,#302b4d,transparent 52%),linear-gradient(125deg,#131d30,#1c2035); }
+html[data-theme="dark"] .sca-study :is(.sca-question,.sca-ownership aside,.sca-quality-grid article,.sca-user-flow li,.sca-ending>div>span) { background:#1c2538; border-color:#43516b; }
+html[data-theme="dark"] .sca-study .sca-user-flow li:last-child { background:#2b2640; }
+html[data-theme="dark"] .sca-study :is(.sca-eyebrow,em,.sca-link,.sca-results dt,.sca-ownership aside>strong) { color:#b5bcff; }
+html[data-theme="dark"] .sca-study :is(.sca-intro,.sca-art>p,.sca-facts dt,.sca-context-grid article>span,.sca-ownership small,.sca-user-flow p,.sca-user-flow li>span,.sca-return-path,.sca-results dd,.sca-results>p,.sca-footer,.sca-design-stages figcaption,.sca-placement-screen figcaption) { color:#b2bdd2; }
+html[data-theme="dark"] .sca-study :is(.sca-section,.sca-footer,.sca-facts,.sca-process,.sca-context-grid article) { border-color:#35415a; }
+html[data-theme="dark"] .sca-study .sca-ending { background:radial-gradient(ellipse at 50% 100%,#292a4e,transparent 75%); }
+html[data-theme="dark"] .sca-study :is(.sca-placement-board,.sca-artifact-grid>div) { background:linear-gradient(125deg,#202a42,#29233c); border-color:#46506b; }
+html[data-theme="dark"] .sca-study :is(.sca-placement-callout strong,.sca-placement-launcher-note strong) { color:#ddd8ff; }
+html[data-theme="dark"] .sca-study :is(.sca-placement-callout p,.sca-placement-launcher-note p,.sca-placement-board figcaption,.sca-artifact-grid p) { color:#b2bdd2; }
+html[data-theme="dark"] .sca-study .sca-mini-chat { color:#202843; }
+html[data-theme="dark"] .sca-study .sca-cta:hover { color:#c9d4ff; }

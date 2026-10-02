@@ -1,0 +1,6 @@
+main .project-confidentiality{display:flex;align-items:flex-start;gap:18px;margin:30px 0 40px;padding:26px 28px;border:1px solid color-mix(in srgb,currentColor 16%,transparent);border-radius:16px;background:color-mix(in srgb,currentColor 3%,transparent);color:inherit}
+main .project-confidentiality>svg{width:22px;height:22px;flex:0 0 22px;margin-top:2px;opacity:.7}
+main .project-confidentiality h2{font-family:inherit;font-size:17px;font-weight:600;letter-spacing:0;line-height:1.4;margin:0 0 10px;color:inherit}
+main .project-confidentiality p{font-size:14px;line-height:1.8;margin:0;max-width:900px;color:inherit;opacity:.8}
+main .project-confidentiality a{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:500;margin-top:15px;color:inherit}
+@media(max-width:600px){main .project-confidentiality{padding:22px 18px;gap:12px}main .project-confidentiality p{font-size:13px}main .project-confidentiality a{font-size:12px}}
