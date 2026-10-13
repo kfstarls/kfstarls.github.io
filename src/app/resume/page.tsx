@@ -31,10 +31,15 @@ export default function ResumePage() {
           />
           <a
             className={`${styles.contactLink} ${styles.linkedinLink}`}
-            href="https://www.linkedin.com/in/faiza-khan-348a9818b"
+            href="https://www.linkedin.com/in/faiza-khan-348a9818b/"
             target="_blank"
             rel="noreferrer"
             aria-label="Visit Faiza Khan’s LinkedIn profile"
+          />
+          <a
+            className={`${styles.contactLink} ${styles.phoneLink}`}
+            href="tel:+919630448610"
+            aria-label="Call Faiza Khan at +91 9630448610"
           />
         </nav>
         <Image

@@ -8,9 +8,10 @@
 .document { display: block; width: 100%; height: auto; }
 .contactLinks { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
 .contactLink { position: absolute; left: 5.4%; width: 24%; pointer-events: auto; border-radius: 3px; }
-.emailLink { top: 6.4%; height: 2%; }
-.portfolioLink { top: 8.2%; height: 2.7%; }
-.linkedinLink { top: 11%; height: 2.4%; }
+.emailLink { top: 6.4%; height: 1.6%; }
+.portfolioLink { top: 8.2%; height: 2.5%; }
+.linkedinLink { top: 11%; height: 1.6%; }
+.phoneLink { top: 12.7%; height: 1.7%; }
 .contactLink:hover { background: #2f80d51a; }
 .contactLink:focus-visible { outline: 2px solid #287bc9; outline-offset: 2px; }
 @media (max-width: 600px) { .viewer { padding: 0 8px 24px; } .toolbar { padding: 18px 8px; flex-wrap: wrap; } .toolbar h1 { font-size: 14px; } }
